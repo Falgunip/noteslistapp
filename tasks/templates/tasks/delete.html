@@ -1,0 +1,8 @@
+<p>Are you sure want to delete "{{item}}"?</p>
+
+<a href="{% url 'list' %}">Cancel</a> <!--redirects back to homepage -->
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="submit" name="Confirm"> <!--When confirm is clicked, sends POST method back to the view -->
+</form>
